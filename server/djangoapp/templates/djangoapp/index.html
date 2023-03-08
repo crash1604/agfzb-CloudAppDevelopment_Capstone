@@ -17,7 +17,37 @@
     <!-- Remove this line the first time you edit this file -->
      This is the index page of your Django app!
     <!--Add a nav bar here -->
+    {% if user.is_authenticated %}
+    <nav>
+        Dealership Reviews
+        <div>
+            <div align="right">
+                <label>{{user.username}}</label>
+                <a href="{% url 'djangoapp:logout' %}">Logout</a>
+            </div>
+        </div>
+    </nav>
+    {% else %}
+    <nav>
+        Dealership Reviews
+        <div align="right">
+            <form action="{% url 'djangoapp:login' %}" method="post">
+                {% csrf_token %}
+                <input type="text" value="username" name="username" >
+                <input type="password" value="password" name="password">
+                {% if message %}
+                    <div>
+                        {{ message }}
+                    </div>
+                {% endif %}
+  
+                <input type="submit" value="submit">
+            </form>
+            <a class="btn btn-link" href="{% url 'djangoapp:registration' %}">Sign Up</a>
+        </div>
+    </nav>
 
+{% endif %}
     <!--Add a dealer table here -->
 
     </body>
