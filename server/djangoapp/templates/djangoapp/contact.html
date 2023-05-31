@@ -1,5 +1,77 @@
-<html>
-    <h1>Contact Us </h1>
-    <p> you can contact us with the details below</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'djangoapp:index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'djangoapp:about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'djangoapp:contact' %}">Contact</a>
+            </li>
+          </ul>
 
-</html>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                {% if user.is_authenticated %}
+                <label>{{user.username}}</label>
+                <a href="{% url 'djangoapp:logout' %}">Logout</a>
+                {% else %}
+                    <form action="{% url 'djangoapp:login' %}" method="post">
+                    {% csrf_token %}
+                        <input type="text" placeholder="username" name="username" >
+                        <input type="password" placeholder="password" name="password">
+                {% if message %}
+                    <div>
+                        {{ message }}
+                    </div>
+                {% endif %}
+                        <input class="btn btn-primary" type="submit" value="submit">
+                        <a class="btn btn-link" href="{% url 'djangoapp:registration' %}">Sign Up</a>
+                    </form>
+                {% endif %}
+                </li>
+          </ul>
+
+
+
+        </div>
+      </nav>
+      <div class="container">
+        <h1>Contact Us</h1>
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Phone</h5>
+              <p class="card-text">Call us at: <span class="text-primary">123-456-7890</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Email</h5>
+              <p class="card-text">Email us at: <span class="text-primary">info@example.com</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Location</h5>
+              <p class="card-text">Visit us at: <span class="text-primary">123 Main Street, City, Country</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+    </html>

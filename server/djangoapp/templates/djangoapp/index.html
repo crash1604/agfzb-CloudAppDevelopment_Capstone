@@ -14,41 +14,51 @@
 </head>
 
     <body>
-    <!-- Remove this line the first time you edit this file -->
-     This is the index page of your Django app!
-    <!--Add a nav bar here -->
-    {% if user.is_authenticated %}
-    <nav>
-        Dealership Reviews
-        <div>
-            <div align="right">
-                <label>{{user.username}}</label>
-                <a href="{% url 'djangoapp:logout' %}">Logout</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'djangoapp:index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'djangoapp:about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'djangoapp:contact' %}">Contact</a>
+                </li>
+              </ul>
+    
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    {% if user.is_authenticated %}
+                    <label>{{user.username}}</label>
+                    <a href="{% url 'djangoapp:logout' %}">Logout</a>
+                    {% else %}
+                        <form action="{% url 'djangoapp:login' %}" method="post">
+                        {% csrf_token %}
+                            <input type="text" placeholder="username" name="username" >
+                            <input type="password" placeholder="password" name="password">
+                    {% if message %}
+                        <div>
+                            {{ message }}
+                        </div>
+                    {% endif %}
+                            <input class="btn btn-primary" type="submit" value="submit">
+                            <a class="btn btn-link" href="{% url 'djangoapp:registration' %}">Sign Up</a>
+                        </form>
+                    {% endif %}
+                    </li>
+              </ul>
+    
+    
+    
             </div>
-        </div>
-    </nav>
-    {% else %}
-    <nav>
-        Dealership Reviews
-        <div align="right">
-            <form action="{% url 'djangoapp:login' %}" method="post">
-                {% csrf_token %}
-                <input type="text" value="username" name="username" >
-                <input type="password" value="password" name="password">
-                {% if message %}
-                    <div>
-                        {{ message }}
-                    </div>
-                {% endif %}
-  
-                <input type="submit" value="submit">
-            </form>
-            <a class="btn btn-link" href="{% url 'djangoapp:registration' %}">Sign Up</a>
-        </div>
-    </nav>
-
-{% endif %}
+          </nav>
     <!--Add a dealer table here -->
+    <h1>Welcome to the Homepage of our Djangoapp</h1>
     <table class="table" id="table" data-filter-control="true">
         <thead>
             <tr>
