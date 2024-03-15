@@ -1,52 +1,22 @@
-# IBM Full Stack Cloud Development Capstone Project (2023)
+# Car Dealership Review Platform
 
-Welcome to my IBM Capstone Project repository! This project serves as a testament to my proficiency in full-stack application development, showcasing my skills in designing, building, and deploying dynamic web applications on the cloud.
+Welcome to the Car Dealership Review Platform repository! This project showcases a cloud-hosted web application built using Django and hosted on the IBM Cloud.
 
-## 🚀 Project Overview
+## Background
 
-- Completed IBM Full Stack Cloud Development Capstone Project, demonstrating expertise in various aspects of full-stack application development.
-- Designed dynamic user experiences and developed frontend pages using HTML, CSS, and JavaScript.
-- Implemented user administration functionalities, built database actions, and configured CI/CD pipelines for automated deployment.
-- Utilized a diverse tech stack including Django, React, Node.js, MongoDB (NoSQL), Python, IBM Code Engine, and Kubernetes.
-- Implemented containerization using Docker and Kubernetes, devising solutions for managing containerized deployments effectively.
+I developed this application as part of the final Capstone Project in the 10-course IBM Full Stack Cloud Developer Professional Certificate on Coursera. The initial version of the Django application was rudimentary, lacking central functionality or templates. The project's architecture and idea were provided by Coursera, with most of the design and layout predetermined. As the project was peer-reviewed against strict requirements, my focus was on implementing functionality and back-end services specified by the course instructors, rather than on improving front-end design or UX.
 
-  ![image](https://github.com/crash1604/agfzb-CloudAppDevelopment_Capstone/assets/39547126/e38e1bab-ab88-4c68-a2a3-c2e6554903fb)
+## Project Requirements
 
+The goal was to build a website where users could select one of Best Car's dealerships (a fictional company) in the US to view other users' reviews of the dealership's cars and submit their own reviews. The site also included basic functionality such as a navigation bar and static "about" and "contact" pages. The website was built using the Python-Django full-stack web development framework and deployed with Red Hat Openshift/Kubernetes on the IBM Cloud.
 
-## 🔑 Key Technologies Used
+## Architecture
 
-- **Frontend**: HTML, CSS, JavaScript, React
-- **Backend**: Django, Node.js, Python
-- **Database**: MongoDB (NoSQL)
-- **Cloud Platforms**: IBM Code Engine, Kubernetes
-- **DevOps**: CI/CD Pipelines, Github Actions
+![Application Architecture](link-to-image)
 
-## 🌟 Project Highlights
+The dealership and review data reside in an IBM Cloudant database, while user and car data are stored in a simple SQLite database. To access data from IBM Cloudant, three IBM Cloud Functions were written, accessible through an API. Each review is analyzed by IBM Watson to determine the review's general sentiment (negative, neutral, positive).
 
-- Designed and developed a robust full-stack application with seamless integration between frontend and backend components.
-- Demonstrated expertise in deploying serverless applications and creating RESTful microservices.
-- Leveraged containerization techniques for efficient deployment and management of application components.
-- Successfully deployed the application on the cloud using Kubernetes, ensuring scalability and high availability.
+## Setup
 
-## 💻 How to Run the Application
+1. Clone the project:
 
-To run the application locally:
-
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Install dependencies using package managers.
-4. Start the server.
-5. Access the application through your web browser.
-
-## 📂 Project Structure
-
-The repository is structured as follows:
-
-- `backend/`: Contains the backend codebase (Django, Node.js).
-- `docs/`: Documentation and resources related to the project.
-- `scripts/`: Scripts for deployment and automation.
-- `README.md`: Overview and instructions for the project.
-
-## 📧 Contact Information
-
-Thank you for visiting my IBM Capstone Project repository!
