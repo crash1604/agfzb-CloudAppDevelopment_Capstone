@@ -10,6 +10,9 @@ Welcome to my IBM Capstone Project repository! This project serves as a testamen
 - Utilized a diverse tech stack including Django, React, Node.js, MongoDB (NoSQL), Python, IBM Code Engine, and Kubernetes.
 - Implemented containerization using Docker and Kubernetes, devising solutions for managing containerized deployments effectively.
 
+  ![image](https://github.com/crash1604/agfzb-CloudAppDevelopment_Capstone/assets/39547126/e38e1bab-ab88-4c68-a2a3-c2e6554903fb)
+
+
 ## 🔑 Key Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript, React
