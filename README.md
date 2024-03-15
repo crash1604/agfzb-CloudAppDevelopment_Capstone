@@ -1,36 +1,49 @@
-# Final Project Template
+# IBM Full Stack Cloud Development Capstone Project (2023)
 
-The final project for this course has several steps that you must complete. 
-To give you an overview of the whole project, all the high-level steps are listed below. 
-The project is then divided into several smaller labs that give the detailed instructions for each step. 
-You must complete all the labs to successfully complete the project.
+Welcome to my IBM Capstone Project repository! This project serves as a testament to my proficiency in full-stack application development, showcasing my skills in designing, building, and deploying dynamic web applications on the cloud.
 
-## Project Breakdown
+## 🚀 Project Overview
 
-**Prework: Sign up for IBM Cloud account and create a Watson Natural language Understanding service**
-1. Create an IBM cloud account if you don't have one already.
-2. Create an instance of the Natural Language Understanding (NLU) service.
+- Completed IBM Full Stack Cloud Development Capstone Project, demonstrating expertise in various aspects of full-stack application development.
+- Designed dynamic user experiences and developed frontend pages using HTML, CSS, and JavaScript.
+- Implemented user administration functionalities, built database actions, and configured CI/CD pipelines for automated deployment.
+- Utilized a diverse tech stack including Django, React, Node.js, MongoDB (NoSQL), Python, IBM Code Engine, and Kubernetes.
+- Implemented containerization using Docker and Kubernetes, devising solutions for managing containerized deployments effectively.
 
-**Fork the project Github repository with a project then build and deploy the template project**
-1. Fork the repository in your account
-2. Clone the repository in the theia lab environment
-3. Create static pages to finish the user stories
-4. Deploy the application on IBM Cloud
+## 🔑 Key Technologies Used
 
-**Add user management to the application**
-1. Implement user management using the Django user authentication system.
-2. Set up continuous integration and delivery
+- **Frontend**: HTML, CSS, JavaScript, React
+- **Backend**: Django, Node.js, Python
+- **Database**: MongoDB (NoSQL)
+- **Cloud Platforms**: IBM Code Engine, Kubernetes
+- **DevOps**: CI/CD Pipelines, Github Actions
 
-**Implement backend services**
-1. Create cloud functions to manage dealers and reviews
-2. Create Django models and views to manage car model and car make
-3. Create Django proxy services and views to integrate dealers, reviews, and cars together
- 
-**Add dynamic pages with Django templates**
-1. Create a page that shows all the dealers
-2. Create a page that show reviews for a selected dealer
-3. Create a page that let's the end user add a review for a selected dealer
+## 🌟 Project Highlights
 
-**Containerize your application**
-1. Add deployment artifacts to your application
-2. Deploy your application
+- Designed and developed a robust full-stack application with seamless integration between frontend and backend components.
+- Demonstrated expertise in deploying serverless applications and creating RESTful microservices.
+- Leveraged containerization techniques for efficient deployment and management of application components.
+- Successfully deployed the application on the cloud using Kubernetes, ensuring scalability and high availability.
+
+## 💻 How to Run the Application
+
+To run the application locally:
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using package managers.
+4. Start the server.
+5. Access the application through your web browser.
+
+## 📂 Project Structure
+
+The repository is structured as follows:
+
+- `backend/`: Contains the backend codebase (Django, Node.js).
+- `docs/`: Documentation and resources related to the project.
+- `scripts/`: Scripts for deployment and automation.
+- `README.md`: Overview and instructions for the project.
+
+## 📧 Contact Information
+
+Thank you for visiting my IBM Capstone Project repository!
